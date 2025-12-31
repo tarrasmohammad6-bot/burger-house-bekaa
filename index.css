@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Restaurant theme colors */
+    --background: 42 39% 97%;
+    --foreground: 25 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 25 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 25 25% 15%;
+
+    /* Warm burger orange/red */
+    --primary: 18 85% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Rich brown */
+    --secondary: 25 40% 35%;
+    --secondary-foreground: 42 39% 97%;
+
+    --muted: 42 20% 90%;
+    --muted-foreground: 25 15% 45%;
+
+    /* Fresh green accent */
+    --accent: 142 52% 48%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 42 20% 85%;
+    --input: 42 20% 85%;
+    --ring: 18 85% 55%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(18 85% 55%), hsl(12 90% 48%));
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(42 20% 98%));
+    
+    /* Shadows */
+    --shadow-menu-card: 0 4px 20px -2px hsl(18 85% 55% / 0.15);
+    --shadow-elevated: 0 10px 40px -10px hsl(25 40% 35% / 0.25);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 25 25% 12%;
+    --foreground: 42 39% 95%;
+
+    --card: 25 20% 15%;
+    --card-foreground: 42 39% 95%;
+
+    --popover: 25 20% 15%;
+    --popover-foreground: 42 39% 95%;
+
+    --primary: 18 85% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 25 30% 25%;
+    --secondary-foreground: 42 39% 95%;
+
+    --muted: 25 20% 20%;
+    --muted-foreground: 42 20% 65%;
+
+    --accent: 142 52% 48%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 25 20% 25%;
+    --input: 25 20% 25%;
+    --ring: 18 85% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
